@@ -22,6 +22,10 @@
 ;; You should have received a copy of the GNU General Public License
 ;; along with GNU Emacs.  If not, see <http://www.gnu.org/licenses/>.
 
+;; **************
+;;  source checked out from http://cvs.savannah.gnu.org/viewvc/*checkout*/emacs/emacs/lisp/iswitchb.el
+;; **************
+
 ;;; Commentary:
 
 ;; Installation:
