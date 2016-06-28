@@ -19,4 +19,24 @@
 
 ;; Keep emacs Custom-settings in separate file
 (setq custom-file (expand-file-name "custom.el" user-emacs-directory))
+
+
+;; Are we on a mac?
+(setq is-mac (equal system-type 'darwin))
+
+;; Setup packages
+(require 'setup-package)
+
+;; Install extensions if they're missing
+(defun init--install-packages ()
+  (packages-install
+   '(window-number
+     winring
+     ))
+  )
 (load custom-file)
+
+
+;; Set up appearance early
+(require 'appearance)
+
