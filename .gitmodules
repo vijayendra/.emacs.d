@@ -1,0 +1,3 @@
+[submodule "snippets/yasnippet-polymer"]
+	path = snippets/yasnippet-polymer
+	url = https://github.com/vijayendra/yasnippet-polymer.git
