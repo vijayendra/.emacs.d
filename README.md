@@ -8,7 +8,7 @@ To grab all the dependencies:
 
 ```shell
 $ cd ~/
-$ git clone git://github.com/magnars/.emacs.d.git
+$ git clone --recursive git://github.com/vijayendra/.emacs.d.git
 ```
 
 The first time you start emacs, it will install some additional packages
