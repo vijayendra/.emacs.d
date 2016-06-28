@@ -15,8 +15,21 @@
  '(js2-mode-indent-ignore-first-tab t)
  '(ns-command-modifier (quote meta))
  '(ns-function-modifier (quote control))
- '(sgml-tag-alist (quote (("![" ("ignore" t) ("include" t)) ("!attlist") ("!doctype") ("test" t) ("!entity"))))
+ '(sgml-tag-alist
+   (quote
+    (("!["
+      ("ignore" t)
+      ("include" t))
+     ("!attlist")
+     ("!doctype")
+     ("test" t)
+     ("!entity"))))
  '(show-paren-mode t nil (paren))
  '(tool-bar-mode nil)
- '(truncate-lines t)
- )
+ '(truncate-lines t))
+(custom-set-faces
+ ;; custom-set-faces was added by Custom.
+ ;; If you edit it by hand, you could mess it up, so be careful.
+ ;; Your init file should contain only one such instance.
+ ;; If there is more than one, they won't work right.
+ '(window-number-face ((t (:foreground "black"))) t))

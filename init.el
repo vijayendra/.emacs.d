@@ -13,6 +13,12 @@
 (setq settings-dir
       (expand-file-name "settings" user-emacs-directory))
 
+(setq saves-dir
+      (expand-file-name "saves" user-emacs-directory))
+
+(setq snippets-dir
+      (expand-file-name "snippets" user-emacs-directory))
+
 ;; Set up load path
 (add-to-list 'load-path settings-dir)
 (add-to-list 'load-path site-lisp-dir)
@@ -26,8 +32,12 @@
 
 (setq package-list
       '(
-        window-number
-        winring
+        web-mode
+        yasnippet
+        go-mode
+        python-mode
+        company
+        company-go
         ))
 
 ;; Setup packages
@@ -46,4 +56,10 @@
 
 ;; Set up appearance early
 (require 'appearance)
+
 (require 'setup-iswitchb)
+(require 'setup-yasnippet)
+(require 'setup-company-mode)
+(require 'setup-web-mode)
+(require 'setup-go-mode)
+

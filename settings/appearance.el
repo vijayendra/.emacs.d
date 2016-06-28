@@ -15,7 +15,7 @@
 ; determine if I'm running Emacs 21 or 20, and change accordingly;
 (setq crs-v21 (eq emacs-major-version 21))
 
-	;; Title
+;; Title
 (setq frame-title-format (list "%b - GNU Emacs " emacs-version))
 (setq icon-title-format frame-title-format)
 
@@ -31,6 +31,7 @@
 ;; Key bindings
 (global-set-key [f1] 'find-file-recursively)
 (global-set-key (kbd "RET") 'newline-and-indent)
+(global-set-key (kbd "M-1") 'other-window)
 
 ; Highlight marked region
 (transient-mark-mode t)
@@ -98,22 +99,12 @@
 ;; Fill up to in Text mode
 (setq default-fill-column 80)	     
 
-;; Auto filling in text mode
-(add-hook 'python-mode-hook
-            '(lambda () (auto-fill-mode 1)))
-(global-set-key "\C-x\C-b" 'electric-buffer-list)
-(add-hook
-'iswitchb-define-mode-map-hook
-'(lambda ()
-(define-key iswitchb-mode-map [tab] 'iswitchb-next-match)))
-
 ;; to open shell in emacs use: M-x shell
 (ansi-color-for-comint-mode-on)
 
 ;; disabling indent-tabs-mode and setting inden offset and tab-width 
 (setq-default indent-tabs-mode nil)
 (setq-default tab-width 4)
-(setq py-indent-offset 4)
 
 ;;to set foreground color to white
 (set-foreground-color "white")
@@ -121,17 +112,12 @@
 ;;to set background color to black
 (set-background-color "black")
 
-;; window number mode
-(require 'window-number)
-(window-number-mode 1)
-(window-number-meta-mode 1)
-
-;; init winring
-(require 'winring)
-(winring-initialize)
-
 ;; fullscreen mode
 (add-to-list 'default-frame-alist '(fullscreen . maximized))
+
+(add-hook 'shell-mode-hook 
+          'ansi-color-for-comint-mode-on)
+
 
 (provide 'appearance)
 
