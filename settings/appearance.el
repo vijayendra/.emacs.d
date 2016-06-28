@@ -130,6 +130,7 @@
 (require 'winring)
 (winring-initialize)
 
-
+;; fullscreen mode
+(add-to-list 'default-frame-alist '(fullscreen . maximized))
 
 (provide 'appearance)
