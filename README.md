@@ -1,4 +1,4 @@
-# My emacs settings
+# My Emacs Settings
 
 These are my emacs settings.
 
