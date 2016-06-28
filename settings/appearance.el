@@ -121,4 +121,15 @@
 ;;to set background color to black
 (set-background-color "black")
 
+;; window number mode
+(require 'window-number)
+(window-number-mode 1)
+(window-number-meta-mode 1)
+
+;; init winring
+(require 'winring)
+(winring-initialize)
+
+
+
 (provide 'appearance)

@@ -24,16 +24,25 @@
 ;; Are we on a mac?
 (setq is-mac (equal system-type 'darwin))
 
+(setq package-list
+      '(
+	window-number
+	winring
+	))
+
 ;; Setup packages
 (require 'setup-package)
 
-;; Install extensions if they're missing
-(defun init--install-packages ()
-  (packages-install
-   '(window-number
-     winring
-     ))
-  )
+; fetch the list of packages available 
+(unless package-archive-contents
+  (package-refresh-contents))
+
+; install the missing packages
+(dolist (package package-list)
+  (unless (package-installed-p package)
+    (package-install package)))
+
+
 (load custom-file)
 
 
