@@ -13,8 +13,9 @@
 (setq web-mode-enable-current-element-highlight t)
 (setq web-mode-enable-current-column-highlight t)
 
-(add-hook 'web-mode-hook '(lambda () (yas-activate-extra-mode 'html-mode)))
 (add-hook 'web-mode-hook '(lambda () (yas-activate-extra-mode 'yasnippet-polymer)))
+(add-hook 'web-mode-hook '(lambda () (yas-activate-extra-mode 'js-mode)))
+(add-hook 'web-mode-hook '(lambda () (yas-activate-extra-mode 'css-mode)))
 (add-hook 'web-mode-hook 'company-mode)
 (add-hook 'web-mode-hook (lambda ()
   (set (make-local-variable 'company-backends) '(company-yasnippet))
