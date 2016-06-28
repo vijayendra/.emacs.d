@@ -26,9 +26,9 @@
 
 (setq package-list
       '(
-	window-number
-	winring
-	))
+        window-number
+        winring
+        ))
 
 ;; Setup packages
 (require 'setup-package)
@@ -42,10 +42,8 @@
   (unless (package-installed-p package)
     (package-install package)))
 
-
 (load custom-file)
-
 
 ;; Set up appearance early
 (require 'appearance)
-
+(require 'setup-iswitchb)
