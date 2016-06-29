@@ -13,9 +13,6 @@
 (setq settings-dir
       (expand-file-name "settings" user-emacs-directory))
 
-(setq saves-dir
-      (expand-file-name "saves" user-emacs-directory))
-
 (setq snippets-dir
       (expand-file-name "snippets" user-emacs-directory))
 
@@ -23,9 +20,17 @@
 (add-to-list 'load-path settings-dir)
 (add-to-list 'load-path site-lisp-dir)
 
+;; Write backup files to own directory
+(setq backup-directory-alist
+      `(("." . ,(expand-file-name
+                 (concat user-emacs-directory "saves")))))
+
 ;; Keep emacs Custom-settings in separate file
 (setq custom-file (expand-file-name "custom.el" user-emacs-directory))
 
+(load custom-file)
+;; Set up appearance early
+(require 'appearance)
 
 ;; Are we on a mac?
 (setq is-mac (equal system-type 'darwin))
@@ -52,10 +57,6 @@
   (unless (package-installed-p package)
     (package-install package)))
 
-(load custom-file)
-
-;; Set up appearance early
-(require 'appearance)
 
 (require 'setup-iswitchb)
 (require 'setup-yasnippet)
