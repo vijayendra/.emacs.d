@@ -29,11 +29,12 @@
 (setq custom-file (expand-file-name "custom.el" user-emacs-directory))
 
 (load custom-file)
-;; Set up appearance early
-(require 'appearance)
 
 ;; Are we on a mac?
 (setq is-mac (equal system-type 'darwin))
+
+;; Set up appearance early
+(require 'appearance)
 
 (setq package-list
       '(
