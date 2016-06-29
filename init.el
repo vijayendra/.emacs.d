@@ -44,6 +44,7 @@
         python-mode
         company
         company-go
+        magit
         ))
 
 ;; Setup packages
@@ -64,4 +65,5 @@
 (require 'setup-company-mode)
 (require 'setup-web-mode)
 (require 'setup-go-mode)
+(require 'setup-magit)
 
