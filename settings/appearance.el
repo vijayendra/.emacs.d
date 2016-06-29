@@ -4,9 +4,6 @@
 
 ;; Don't beep. Don't visible-bell (fails on el capitan). Just blink the modeline on errors.
 (setq visible-bell nil)
-;; (setq ring-bell-function (lambda ()
-;;                            (invert-face 'mode-line)
-;;                            (run-with-timer 0.05 nil 'invert-face 'mode-line)))
 
 (put 'upcase-region 'disabled nil)
 (add-hook 'write-file-hooks 'time-stamp)
@@ -118,6 +115,8 @@
 (add-hook 'shell-mode-hook 
           'ansi-color-for-comint-mode-on)
 
+;; setting default c-x f directory
+(setq default-directory (concat (getenv "HOME") "/"))
 
 (provide 'appearance)
 
