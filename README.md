@@ -16,4 +16,4 @@ that are best handled by the package manager.
 
 ## License
 
-[MIT License](LICENSE) © Vijayendra Bapte
+[MIT License](https://vijayendra.mit-license.org/) © Vijayendra Bapte
