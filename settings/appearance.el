@@ -26,8 +26,19 @@
 (define-key global-map "\e\e" 'goto-line)
 
 ;; Key bindings
-(global-set-key [f1] 'find-file-recursively)
+
+; grep something in current directory
+(global-set-key [f1] 'grep-find)
+
+; search for a file in a given directory
+(global-set-key [f2] 'find-dired)
+
+; grep for a directory in a given directory
+(global-set-key [f3] 'find-name-dired)
+
 (global-set-key (kbd "RET") 'newline-and-indent)
+
+; switch to other window
 (global-set-key (kbd "M-1") 'other-window)
 
 ; Highlight marked region
