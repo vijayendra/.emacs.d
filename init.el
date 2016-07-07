@@ -66,4 +66,5 @@
 (require 'setup-web-mode)
 (require 'setup-go-mode)
 (require 'setup-magit)
+(require 'setup-yaml)
 
