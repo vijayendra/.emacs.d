@@ -16,3 +16,7 @@ site-lisp/adventur-mode
 /var/
 /.sx/
 /ensime/
+TAGS
+.python-environments/
+snippets/yasnippet-polymer/
+ac-comphist.dat

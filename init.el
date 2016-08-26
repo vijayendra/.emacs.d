@@ -41,10 +41,17 @@
         web-mode
         yasnippet
         go-mode
-        python-mode
         company
         company-go
         magit
+        python-mode
+        jedi
+        jedi-direx
+        company-jedi
+        flycheck
+        flycheck-pyflakes
+        py-autopep8
+        py-isort
         ))
 
 ;; Setup packages
@@ -67,4 +74,7 @@
 (require 'setup-go-mode)
 (require 'setup-magit)
 (require 'setup-yaml)
+(require 'setup-python-mode)
+(require 'setup-flycheck-mode)
+
 
