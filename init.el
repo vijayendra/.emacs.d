@@ -49,7 +49,6 @@
         jedi-direx
         company-jedi
         flycheck
-        flycheck-pyflakes
         py-autopep8
         py-isort
         ))

@@ -1,7 +1,10 @@
 (require 'python-mode)
 
+                                        ;(setq python-shell-virtualenv-path "/Users/vijay/gitrepos/drive-migration/venv")
+(setq python-shell-virtualenv-path "/Users/vijay/gitrepos/codeZ/venv")
+
 (add-hook 'python-mode-hook 'jedi:setup)
-(setq jedi:complete-on-dot t)
+(setq jedi:complete-on-dot nil)
 
 (with-eval-after-load 'company
   (add-to-list 'company-backends 'company-jedi))
@@ -17,5 +20,7 @@
 (require 'py-isort)
 (add-hook 'before-save-hook 'py-isort-before-save)
 (setq py-isort-options '("--lines=100"))
+
+
 
 (provide 'setup-python-mode)
