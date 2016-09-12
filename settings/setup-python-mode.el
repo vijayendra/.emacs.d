@@ -1,7 +1,6 @@
 (require 'python-mode)
 
-                                        ;(setq python-shell-virtualenv-path "/Users/vijay/gitrepos/drive-migration/venv")
-(setq python-shell-virtualenv-path "/Users/vijay/gitrepos/codeZ/venv")
+(setq python-shell-virtualenv-path "/Users/vijay/gitrepos/drive-migration/venv")
 
 (add-hook 'python-mode-hook 'jedi:setup)
 (setq jedi:complete-on-dot nil)
@@ -16,6 +15,7 @@
 (require 'py-autopep8)
 (add-hook 'python-mode-hook 'py-autopep8-enable-on-save)
 (setq py-autopep8-options '("--max-line-length=100"))
+(setq py-autopep8-options '("--ignore=E265"))
 
 (require 'py-isort)
 (add-hook 'before-save-hook 'py-isort-before-save)
