@@ -40,7 +40,7 @@
       '(
         web-mode
         yasnippet
-        go-mode
+        ; go-mode
         company
         company-go
         magit
@@ -49,6 +49,7 @@
         jedi-direx
         company-jedi
         flycheck
+        ; virtualenvwrapper
         py-autopep8
         py-isort
         ))
@@ -70,7 +71,7 @@
 (require 'setup-yasnippet)
 (require 'setup-company-mode)
 (require 'setup-web-mode)
-(require 'setup-go-mode)
+; (require 'setup-go-mode)
 (require 'setup-magit)
 (require 'setup-yaml)
 (require 'setup-python-mode)

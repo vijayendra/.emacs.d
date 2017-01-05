@@ -15,6 +15,11 @@
  '(js2-mode-indent-ignore-first-tab t)
  '(ns-command-modifier (quote meta))
  '(ns-function-modifier (quote control))
+ '(safe-local-variable-values
+   (quote
+    ((project-venv-name . "celery-test")
+     (project-venv-name . "mongo-test")
+     (project-venv-name . "/Users/vijay/gitrepos/mongo-test/venv"))))
  '(sgml-tag-alist
    (quote
     (("!["
@@ -32,4 +37,10 @@
  ;; If you edit it by hand, you could mess it up, so be careful.
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
+ '(company-preview ((t (:foreground "darkgray" :underline t))))
+ '(company-preview-common ((t (:inherit company-preview))))
+ '(company-tooltip ((t (:background "lightgray" :foreground "black"))))
+ '(company-tooltip-common ((((type x)) (:inherit company-tooltip :weight bold)) (t (:inherit company-tooltip))))
+ '(company-tooltip-common-selection ((((type x)) (:inherit company-tooltip-selection :weight bold)) (t (:inherit company-tooltip-selection))))
+ '(company-tooltip-selection ((t (:background "steelblue" :foreground "white"))))
  '(window-number-face ((t (:foreground "black"))) t))
