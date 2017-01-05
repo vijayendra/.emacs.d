@@ -1,7 +1,5 @@
 (require 'python-mode)
 
-; (setq python-shell-virtualenv-path "/Users/vijay/gitrepos/drive-migration/venv")
-
 (add-hook 'python-mode-hook 'jedi:setup)
 (setq jedi:complete-on-dot nil)
 
