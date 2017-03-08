@@ -20,5 +20,4 @@
 (setq py-isort-options '("--lines=100"))
 
 
-
 (provide 'setup-python-mode)

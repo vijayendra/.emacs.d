@@ -10,6 +10,10 @@
  '(current-language-environment "Latin-1")
  '(default-input-method "latin-1-prefix")
  '(global-font-lock-mode t nil (font-lock))
+ '(grep-find-command
+   (quote
+    ("find ~/emt/srcs -name \"*.py\" -not -name \"*.pyc\" -not -name \"*flycheck*\" -exec grep --color -nH -e  \\{\\} +" . 99)))
+ '(grep-find-template "")
  '(js2-basic-offset 2)
  '(js2-bounce-indent-p nil)
  '(js2-mode-indent-ignore-first-tab t)

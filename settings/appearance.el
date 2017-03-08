@@ -27,7 +27,6 @@
 
 ;; Key bindings
 
-; grep something in current directory
 (global-set-key [f1] 'grep-find)
 
 ; search for a file in a given directory
