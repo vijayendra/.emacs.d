@@ -59,6 +59,7 @@
         ; virtualenvwrapper
         py-autopep8
         py-isort
+        yaml-mode
         ))
 
 ;; Setup packages
