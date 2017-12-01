@@ -1,5 +1,6 @@
 (require 'yasnippet)
 
+
 (yas/initialize)
 (yas-global-mode 1)
 
@@ -32,6 +33,9 @@
 
 ;; Wrap around region
 (setq yas-wrap-around-region t)
+
+(define-key yas-minor-mode-map [(tab)] nil)
+(define-key yas-minor-mode-map (kbd "TAB") nil)
 
 (provide 'setup-yasnippet)
 

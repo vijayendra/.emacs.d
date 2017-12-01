@@ -12,7 +12,7 @@
  '(global-font-lock-mode t nil (font-lock))
  '(grep-find-command
    (quote
-    ("find ~/emt/srcs -name \"*.py\" -not -name \"*.pyc\" -not -name \"*flycheck*\" -exec grep --color -nH -e  \\{\\} +" . 99)))
+    ("find ~/gitrepos/ecl -name \"*.py\" -not -name \"*.pyc\" -not -name \"*flycheck*\" -exec grep --color -nH -e  \\{\\} +" . 103)))
  '(grep-find-template "")
  '(js2-basic-offset 2)
  '(js2-bounce-indent-p nil)
