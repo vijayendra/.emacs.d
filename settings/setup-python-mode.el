@@ -3,6 +3,17 @@
 (add-hook 'python-mode-hook 'jedi:setup)
 (setq jedi:complete-on-dot nil)
 
+;; use following for python3 support
+(setq jedi:environment-root "python3")
+
+(setq jedi:environment-virtualenv
+      (list "/Library/Frameworks/Python.framework/Versions/3.6/bin/virtualenv"))
+
+;; use following for python2 support
+;; (setq jedi:environment-root "python2")
+;; (setq jedi:environment-virtualenv
+;;       (list "/usr/local/bin/virtualenv-2.7"))
+
 (with-eval-after-load 'company
   (add-to-list 'company-backends 'company-jedi))
 

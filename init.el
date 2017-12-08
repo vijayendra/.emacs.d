@@ -45,6 +45,7 @@
 
 (setq package-list
       '(
+	exec-path-from-shell
         web-mode
         yasnippet
         ; go-mode
@@ -64,6 +65,8 @@
 
 ;; Setup packages
 (require 'setup-package)
+
+(exec-path-from-shell-initialize)
 
 ; fetch the list of packages available 
 (unless package-archive-contents
