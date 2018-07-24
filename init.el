@@ -4,9 +4,12 @@
 ;; installed packages.  Don't delete this line.  If you don't want it,
 ;; just comment it out by adding a semicolon to the start of the line.
 ;; You may delete these explanatory comments.
+(require 'package)
+(add-to-list 'package-archives
+             '("melpa-stable" . "https://stable.melpa.org/packages/"))
 (package-initialize)
 
-(if (fboundp 'menu-bar-mode) (menu-bar-mode -1))
+;(if (fboundp 'menu-bar-mode) (menu-bar-mode -1))
 (if (fboundp 'tool-bar-mode) (tool-bar-mode -1))
 (if (fboundp 'scroll-bar-mode) (scroll-bar-mode -1))
 
@@ -22,6 +25,10 @@
 
 (setq snippets-dir
       (expand-file-name "snippets" user-emacs-directory))
+
+(defun my-comint-init ()
+  (setq comint-process-echoes t))
+(add-hook 'comint-mode-hook 'my-comint-init)
 
 ;; Set up load path
 (add-to-list 'load-path settings-dir)
@@ -61,6 +68,7 @@
         py-autopep8
         py-isort
         yaml-mode
+        markdown-mode
         ))
 
 ;; Setup packages
@@ -86,5 +94,6 @@
 (require 'setup-yaml)
 (require 'setup-python-mode)
 (require 'setup-flycheck-mode)
+
 
 
