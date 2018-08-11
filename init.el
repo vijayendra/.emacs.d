@@ -69,6 +69,9 @@
         py-isort
         yaml-mode
         markdown-mode
+        eclim
+        gradle-mode
+        company-emacs-eclim
         ))
 
 ;; Setup packages
@@ -94,6 +97,7 @@
 (require 'setup-yaml)
 (require 'setup-python-mode)
 (require 'setup-flycheck-mode)
+(require 'setup-eclim-mode)
 
 
 

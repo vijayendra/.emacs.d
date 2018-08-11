@@ -9,10 +9,15 @@
  '(column-number-mode t)
  '(current-language-environment "Latin-1")
  '(default-input-method "latin-1-prefix")
+ '(eclim-eclipse-dirs (quote ("/Users/vijay/eclipse/java-photon/Eclipse.app")))
+ '(eclim-executable "/Users/vijay/.p2/pool/plugins/org.eclim_2.8.0/bin/eclim")
+ '(eclimd-default-workspace "~/eclipse-workspace")
+ '(eclimd-executable
+   "/Users/vijay/eclipse/java-photon/Eclipse.app/Contents/Eclipse/eclimd")
  '(global-font-lock-mode t nil (font-lock))
  '(grep-find-command
    (quote
-    ("find ~/gitrepos/ecl -name \"*.py\" -not -name \"*.pyc\" -not -name \"*flycheck*\" -exec grep --color -nH -e  \\{\\} +" . 103)))
+    ("find ~/gitrepos/cmmcloud -name \"*.py\" -not -name \"*.pyc\" -not -name \"*flycheck*\" -exec grep --color -nH -e \"\" \\{\\} +" . 109)))
  '(grep-find-template "")
  '(js2-basic-offset 2)
  '(js2-bounce-indent-p nil)
